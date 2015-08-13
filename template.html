@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Web App</title>
+    <!-- 页面描述内容description -->
+    <meta name="description" content="描述内容">
+    <!-- 页面关键词keywords -->
+    <meta name="keywords" content="关键词">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--设置iOS Andorid浏览器的默认渲染宽度 (在320~414之间)-->   
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0,minimal-ui">
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="telephone=no, email=no" />          
+    <!-- UC强制竖屏(仅支持andorid) -->
+    <meta name="screen-orientation" content="portrait">    
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"> 
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Normalize.css 是一个可以定制的CSS文件，它让不同的浏览器在渲染网页元素的时候形式更统一。-->
+    <link rel="stylesheet" href="resource/css/normalize.css">
+    <link rel="stylesheet" href="resource/css/main.css">
+</head>
+<body>
+    <!-- 内容页 -->
+    <div class="wrap" id="js-wrapper">
+        <div class="wrapper wrapper1 js-wrapper1">
+            <h2>页面一</h2>
+            <button onClick="Jser.switchScene('.js-wrapper1','.js-wrapper2')">切换到场景2</button>            
+            <button onClick="Jser.share()">分享</button>
+            <button onClick="Jser.alert('弹出框')">弹出框</button>
+            <button onClick="Jser.confirm('对话弹出框')">对话弹出框</button>
+        </div>
+        <div class="wrapper wrapper2 js-wrapper2 h5-hide">
+            <h2>页面二</h2>
+            <button onClick="Jser.switchScene('.js-wrapper2','.js-wrapper1')">切换到场景1</button>
+        </div> 
+    </div>
+    <!-- 加载 -->
+    <div class="h5-shade h5-loading" id="js-loading">        
+        <img src="resource/images/shuxin.gif">&nbsp;&nbsp;奋力加载中...
+    </div>
+    <!-- 底部进度条 -->
+    <div class="h5-list-loading js-list-loading">
+        正在奋力加载中<i></i>
+    </div>
+    <!-- 弹出框 --> 
+    <div class="h5-shade h5-dialog" id="js-dialog-tpl">
+        <div class="h5-dialog-inner">
+            <div class="h5-dialog-msg js-dialog-msg"></div>
+            <div class="h5-dialog-btns h5-flex-equal">
+                <a href="javascript:;" class="h5-grain js-dialog-close" data-uid="123456">好</a>
+            </div>
+        </div>
+    </div>   
+    <!-- 分享   -->
+    <div class="h5-shade h5-weixin-share" id="js-weixin-share">
+        <img src="resource/images/share.png" class="h5-share" />        
+    </div>   
+    <script src="resource/js/lib/jquery-2.1.3.min.js"></script>
+    <!-- 微信分享SDK -->
+    <script src="resource/js/lib/jweixin-1.0.0.js"></script>
+    <!-- 微信分享SDK分享设置 -->
+    <script src="resource/js/lib/weixinshare.js"></script>
+    <!-- 移动端基础类库 -->
+    <script src="resource/js/jser.js"></script>
+    <script src="resource/js/main.js"></script>    
+</body>
+</html>
