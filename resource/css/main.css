@@ -1,0 +1,6 @@
+.header{width: 100%;height: 60px;color: #fff;line-height: 60px;background: #000;}
+.hd-logo{width: 108px;height: 60px;background: url(../images/hd-logo.jpg) no-repeat;margin:0 11px 0 30px;}
+.hd-tel{
+	margin-right: 30px;
+	color: #fff;
+}
